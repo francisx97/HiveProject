@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Hive</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_email">Email</string>
+    <string name="Login_title">Welcome to Hive</string>
+    <string name="login_button">Login to Account</string>
+    <string name="login_reg_brn_txt">Need a new Account?</string>
+    <string name="action_searchtxt">Search</string>
+    <string name="action_settingtxt">Account Setting</string>
+    <string name="action_logouttxt">Logout</string>
+    <string name="action_search_txt">Search</string>
+    <string name="action_account_txt">Account Settings</string>
+    <string name="action_Logout_txt">Logout</string>
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "34041770664",
+    "firebase_url": "https://hive-2ef01.firebaseio.com",
+    "project_id": "hive-2ef01",
+    "storage_bucket": "hive-2ef01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34041770664:android:77e57c8537c6b18158489d",
+        "android_client_info": {
+          "package_name": "com.example.hive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34041770664-br2go0ddbkpie8a6qn58tprugveks31p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hive",
+            "certificate_hash": "997dc5d8313c98ca1253cff711b435519e5b7ba7"
+          }
+        },
+        {
+          "client_id": "34041770664-d4hsutr6pper0qj868os4n1prb4jk307.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4QL2I9Td7EwngkXHkKhmTpnoKaoT0j6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34041770664-d4hsutr6pper0qj868os4n1prb4jk307.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
