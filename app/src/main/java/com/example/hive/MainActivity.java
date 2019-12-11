@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.sax.StartElementListener;
 import android.view.Menu;
+import android.view.MenuItem;
 //import android.widget.Toolbar;
 import androidx.appcompat.widget.Toolbar;
 
@@ -20,12 +21,16 @@ public class MainActivity extends AppCompatActivity {
 
     private Toolbar MainToolbar;
 
+    private FirebaseAuth mAuth;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mAuth = FirebaseAuth.getInstance();
 
    MainToolbar = (Toolbar) findViewById(R.id.main_toolbar);
    setSupportActionBar(MainToolbar);
@@ -41,9 +46,8 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser == null){
 
-            Intent loginIntent = new Intent( MainActivity.this,LoginActivity.class);
-            startActivity(loginIntent);
-            finish();
+            //sending the user to the login page
+            sendToLogin();
         }
     }
 
@@ -60,4 +64,38 @@ public class MainActivity extends AppCompatActivity {
         return true;
 
     }
+
+    //saying when any Item in the menu is selected
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.action_logout_btn:
+                //creating logout method in toolbar
+                logout();
+
+
+                return true;
+
+
+            default:
+                return false;
+        }
+
+
+    }
+
+    //making sure the user signs out first and then runs sendToLogin method
+    private void logout() {
+        mAuth.signOut();
+        sendToLogin();
+    }
+
+    //creating the method to send users to login page
+    private void sendToLogin() {
+        Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(loginIntent);
+        finish();
+    }
+
 }
