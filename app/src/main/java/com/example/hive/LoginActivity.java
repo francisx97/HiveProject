@@ -45,6 +45,17 @@ public class LoginActivity extends AppCompatActivity {
         LoginRegButton = (Button) findViewById(R.id.Login_Reg_Button);
         LoginProgress = (ProgressBar) findViewById(R.id.Login_progress_Bar);
 
+        LoginRegButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //sending user to registration page when they click Register
+                Intent regIntent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(regIntent);
+            }
+        });
+
+
+
 // giving the login button its function, once the sure types in email and password text we use it for the login.
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override

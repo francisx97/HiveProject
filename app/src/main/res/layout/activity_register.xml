@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/reg_pass_txt" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/reg_create_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="71dp"
@@ -69,7 +69,7 @@
         app:layout_constraintTop_toBottomOf="@+id/reg_confirm_pass_txt" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/reg_have_acc_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
