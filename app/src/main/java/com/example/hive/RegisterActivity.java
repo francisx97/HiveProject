@@ -49,6 +49,15 @@ public class RegisterActivity extends AppCompatActivity {
         RegProgressbar = (ProgressBar) findViewById(R.id.reg_progressBar);
 
 
+        RegHaveAccButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sendToLoginIntent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(sendToLoginIntent);
+            }
+        });
+
+
         //creating click listener for creating account btn
         RegCreateAccButton.setOnClickListener(new View.OnClickListener() {
             @Override
