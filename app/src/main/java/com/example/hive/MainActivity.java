@@ -1,5 +1,6 @@
 package com.example.hive;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,8 +12,7 @@ import android.view.MenuItem;
 import androidx.appcompat.widget.Toolbar;
 
 
-
-
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -37,6 +37,37 @@ public class MainActivity extends AppCompatActivity {
 
     getSupportActionBar().setTitle("Hive");
 
+        //initialize and assign Variable
+        BottomNavigationView bottomNavigationView = findViewById(R.id.botom_nav);
+
+        //set Homes selected
+        bottomNavigationView.setSelectedItemId(R.id.home);
+
+        //performmItem selected
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                switch (menuItem.getItemId()) {
+                    case R.id.dashboard:
+                        startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+
+                    case R.id.home:
+
+                        return true;
+
+                    case R.id.payment:
+                        startActivity(new Intent(getApplicationContext(), PaymentActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                }
+
+                return false;
+            }
+        });
     }
 
     @Override

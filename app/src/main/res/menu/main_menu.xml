@@ -4,13 +4,17 @@
 
     <item
         android:id="@+id/action_search_btn"
-        android:icon="@mipmap/action_search"
+        android:icon="@drawable/ic_search"
         android:title="@string/action_search_txt"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_acountSetting_btn"
+        android:icon="@drawable/ic_account_settings"
+        app:showAsAction="always"
         android:title="@string/action_account_txt" />
     <item
         android:id="@+id/action_logout_btn"
+        android:icon="@drawable/ic_logout"
+        app:showAsAction="always"
         android:title="@string/action_Logout_txt" />
 </menu>
